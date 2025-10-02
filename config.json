@@ -1,0 +1,13 @@
+{
+	"endpoint": "opc.tcp://0.0.0.0:4840/freeopcua/server/",
+	"namespaces": [
+		"http://opcfoundation.org/UA/DI/",
+		"http://twin.eulynx.eu/generic/",
+		"http://yourorganisation.org/customobject/"
+	],
+	"nodeset2": [
+		"../poc-OPCUA-asyncio/Opc.Ua.Di.NodeSet2.xml",
+		"../poc-OPCUA-asyncio/eulynx.generic.bl4r3.xml",
+		"../poc-OPCUA-asyncio/customobject.xml"
+	]
+}
