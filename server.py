@@ -71,14 +71,6 @@ async def main():
         ]
     )
     
-    # server.set_security_policy(
-        # [
-            # ua.SecurityPolicyType.NoSecurity,
-            # ua.SecurityPolicyType.Basic256Sha256_SignAndEncrypt,
-            # ua.SecurityPolicyType.Basic256Sha256_Sign,
-        # ]
-    # )
-    
     # load server certificate and private key. This enables endpoints
     # with signing and encryption.
     await server.load_certificate(str(server_cert))
@@ -104,26 +96,6 @@ async def main():
     print(f"model['idx'] = {model["idx"]}")
     print(f"custom_idx = {custom_idx}")
 
-    # # Instantiate LevelCrossingType (defined in eulynx.generic.bl4r3.xml) and add to LevelCrossingProductGroupSet
-    # # ######################################################
-    # node_level_crossing_type = server.get_node("ns=3;i=1130") # Level crossing
-    # print("node_level_crossing_type = " + str(node_level_crossing_type))   
-    # node_level_crossing_type_nodeid = node_level_crossing_type.nodeid
-    # print("node_level_crossing_type_nodeid = " + str(node_level_crossing_type_nodeid))
-    # levelCrossingProductGroupSet_obj = server.get_node("ns=3;i=5124") # levelCrossingProductGroupSet
-    # # myLevelCrossing = await levelCrossingProductGroupSet_obj.add_object(3, "MyLevelCrossing", node_level_crossing_type_nodeid)
-    # myLevelCrossing = await instantiate(levelCrossingProductGroupSet_obj, node_level_crossing_type, dname=ua.LocalizedText.from_string("MyLevelCrossing"))
-
-    # # Instantiate <Controller> (defined in eulynx.generic.bl4r3.xml) and add to LevelCrossingEquipmentSet
-    # # ######################################################
-    # node_controller_type = server.get_node("ns=3;i=5086") # <Controller>
-    # print("node_controller_type = " + str(node_controller_type))   
-    # node_controller_type_nodeid = node_controller_type.nodeid
-    # print("node_controller_type_nodeid = " + str(node_controller_type_nodeid))
-    # levelCrossingEquipmentSet_obj = server.get_node("ns=3;i=5114") # LevelCrossingEquipmentSet
-    # # myController = await levelCrossingEquipmentSet_obj.add_object(3, "MyController", node_controller_type_nodeid)
-    # myLevelCrossing = await instantiate(levelCrossingEquipmentSet_obj, node_controller_type, dname=ua.LocalizedText.from_string("MyController"))
-
     print("Starting Loop!")
     async with server:
         count = 0
@@ -137,4 +109,5 @@ async def main():
 if __name__ == "__main__":
     # logging.basicConfig(level=logging.INFO)
     asyncio.run(main())
+
     
