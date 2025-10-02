@@ -312,19 +312,9 @@ Soon after the connection is stabilished, a reverse Hello is sent by the reverse
 
 # Testing
 
-## Endpoint for Reverse Connect to an external equipment:
+TODO
 
-- Endpoint: sfd.infragrid.org
-- Port: 4840
-- Supported Security Modes
-    - Sign
-    - SignAndEncrypt
-- Supported SecurityPolicies:
-    - Basic128Rsa15
-    - Basic256
-    - Basic256Sha256
-    - Aes128Sha256RsaOaep
-    - Aes256Sha256RsaPss
+
 
 
 
