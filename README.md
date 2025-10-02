@@ -58,6 +58,8 @@ Security is supported. If certificates are not found in the directory, the clien
 
 This server connects to a reverse client and provides a static data model defined in `config.json`. This allows the client to browse the server’s nodes.
 
+> ⚠️ The XML model files used by this example is not included in the repository.
+
 The main difference from a standard server is the use of the custom `ReverseServer` class instead of `asyncua.Server`.
 
 ```python
@@ -84,9 +86,9 @@ class ReverseServer(Server):
 ```
 
 The server’s data model is configured via `config.json`, which is processed by `.\lib\import_model.py`.
-> 🔹 The `endpoint` configuration in the JSON is currently unused and can be ignored.
+> ⚠️ The `endpoint` configuration in the JSON is currently unused and can be ignored.
 
-> The reason for using this import model library is because I used another project as example for the server which already used it.
+> The reason for using this import model library in 'lib\' is because I used another project as example for the server which already used it.
 
 #### Security
 
@@ -313,6 +315,7 @@ Soon after the connection is stabilished, a reverse Hello is sent by the reverse
 # Testing
 
 TODO
+
 
 
 
